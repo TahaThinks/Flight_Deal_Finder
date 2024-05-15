@@ -5,3 +5,8 @@ class FlightData:
     def __init__(self):
         self.auth = SHEETY_AUTH
         self.url = SHEETY_URL
+
+    def getdata(self):
+        response = requests.get(url=self.url, headers=self.auth)
+        print(response.json())
+
