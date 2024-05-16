@@ -10,7 +10,5 @@ flights_available = sheet_data['prices']
 
 for flight_available in flights_available:
     if not flight_available["iataCode"]:
-        print(f"No Code for {flight_available["city"]}")
-
-
-# is_iataCode = sheet_data['prices']
+        print(f"No Code for {flight_available["city"]}, Adding..")
+        flight_details.write_data(flight_available)

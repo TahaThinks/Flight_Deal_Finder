@@ -13,5 +13,5 @@ class FlightData:
         # return response.json()
         return data
 
-    def write_data(self):
-        pass
+    def write_data(self, flight_available):
+        flight_available["iataCode"] = "TESTING"
