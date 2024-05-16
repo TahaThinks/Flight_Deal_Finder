@@ -3,4 +3,13 @@
 from flight_data import FlightData
 
 flight_details = FlightData()
-flight_details.getdata()
+sheet_data = flight_details.read_data()
+print(sheet_data['prices'])
+
+flights_details = sheet_data['prices']
+
+for flight_details in flights_details:
+    if flight_details["iataCode"] == "":
+        print(f"No Code, adding one now for {flight_details["city"]}")
+
+# is_iataCode = sheet_data['prices']
