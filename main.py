@@ -10,6 +10,6 @@ flights_details = sheet_data['prices']
 
 for flight_details in flights_details:
     if flight_details["iataCode"] == "":
-        print(f"No Code, adding one now for {flight_details["city"]}")
+        print(f"No Code for {flight_details["city"]}")
 
 # is_iataCode = sheet_data['prices']
