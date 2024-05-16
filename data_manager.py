@@ -24,5 +24,5 @@ class DataManager:
         return data
 
     def upload_data(self, flight_detail):
-        print(f"update row {flight_detail["id"]} with {flight_detail["iataCode"]}")
-
+        put_endpoint = f"{self.url}/{flight_detail["id"]}"
+        print(put_endpoint)
