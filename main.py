@@ -6,10 +6,11 @@ flight_details = FlightData()
 sheet_data = flight_details.read_data()
 print(sheet_data['prices'])
 
-flights_details = sheet_data['prices']
+flights_available = sheet_data['prices']
 
-for flight_details in flights_details:
-    if not flight_details["iataCode"]:
-        print(f"No Code for {flight_details["city"]}")
+for flight_available in flights_available:
+    if not flight_available["iataCode"]:
+        print(f"No Code for {flight_available["city"]}")
+
 
 # is_iataCode = sheet_data['prices']
