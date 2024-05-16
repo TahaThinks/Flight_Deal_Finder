@@ -26,3 +26,10 @@ class DataManager:
     def upload_data(self, flight_detail):
         put_endpoint = f"{self.url}/{flight_detail["id"]}"
         print(put_endpoint)
+        params_update = {
+            "price": {
+                "iataCode": flight_detail["iataCode"]
+            }
+        }
+        response = requests.put(url=put_endpoint, headers=self.auth, json=params_update)
+        response.raise_for_status()
