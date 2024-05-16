@@ -24,6 +24,5 @@ class DataManager:
         return data
 
     def write_data(self):
-        response = requests.put(url=self.url, headers=self.auth)
-        return response.json()
-        pass
+        print("Send Data to Google Sheet")
+
