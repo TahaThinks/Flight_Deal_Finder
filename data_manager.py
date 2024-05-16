@@ -18,11 +18,11 @@ class DataManager:
         self.auth = SHEETY_AUTH
         self.url = SHEETY_URL
 
-    def read_data(self):
+    def download_data(self):
         # response = requests.get(url=self.url, headers=self.auth)
         # return response.json()
         return data
 
-    def write_data(self):
-        print("Send Data to Google Sheet")
+    def upload_data(self, flight_detail):
+        print(f"update row {flight_detail["id"]} with {flight_detail["iataCode"]}")
 
