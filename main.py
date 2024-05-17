@@ -13,7 +13,7 @@ flight_details_update = FlightSearch()
 for flight_available in flights_available:
     if not flight_available["iataCode"]:
         flight_details_update.write_iataCode(flight_available)
-        flight_details.upload_data(flight_available)
+        # flight_details.upload_data(flight_available)
 
 print(flights_available)
 

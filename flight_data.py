@@ -1,6 +1,6 @@
 from api_data import SHEETY_AUTH, SHEETY_URL
 import requests
-from api_data import AMADEUS_KEY, AMADEUS_SECRET
+from api_data import AMADEUS_KEY, AMADEUS_SECRET, AMADEUS_URL
 import datetime as dt
 
 
@@ -16,5 +16,9 @@ class FlightData:
         self.price = 0
         self.departure_airport_code = ""
         self.departure_city = ""
+
+    def get_flights(self):
+        endpoint = f"{AMADEUS_URL}/shopping/availability/flight-availabilities"
+        # flights_data = requests.get(url=endpoint)
 
 
